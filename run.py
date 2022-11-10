@@ -28,18 +28,21 @@ def play_game():
     # which letters the user has guessed
     guessed_letters = set()
 
-    # get input from user
-    user_input = input("Guess a letter: ").upper()
-    # if user input is a valid letter and has not been used yet
-    # then add the guessed letter to guessed_letter set.
-    if user_input in alphabet - guessed_letters:
-        guessed_letters.add(user_input)
-        # if user input is correct then remove letter from letters_in_word
-        if user_input in letters_in_word:
-            letters_in_word.remove(user_input)
+    # get input from user as long as letters_in_word is greater then 0
+    while len(letters_in_word) > 0:
+        user_input = input("Guess a letter: ").upper()
+        # if user input is a valid letter and has not been used yet
+        # then add the guessed letter to guessed_letter set.
+        if user_input in alphabet - guessed_letters:
+            guessed_letters.add(user_input)
+            # if user input is correct then remove letter from letters_in_word
+            if user_input in letters_in_word:
+                letters_in_word.remove(user_input)
 
-        elif user_input in guessed_letters:
-            print("Letter has already been used. Please try a new letter")
+            elif user_input in guessed_letters:
+                print("Letter has already been used. Please try a new letter")
 
-        else:
-            print("Invalid character. Please try again.")
+            else:
+                print("Invalid character. Please try again.")
+
+    # while loop ends here when letters_in_words == 0
