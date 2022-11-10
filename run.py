@@ -28,14 +28,17 @@ def play_game():
     # which letters the user has guessed
     guessed_letters = set()
 
+    attempts = 10
+
     # get input from user as long as letters_in_word is greater then 0
     while len(letters_in_word) > 0:
         # each used letter shown as a string seperated by whitespace
         print("You have used these letters: ", " ".join(guessed_letters))
 
-        # show correctly guessed letters in word otherwise hide letters with a *
-        word_list = [letter if letter in guessed_letters else "*" for letter in word]
-        print("The current word is: ", " ".join.(word_list))
+        # show correctly guessed letters in word otherwise hide letters with *
+        word_list = [letter if letter in guessed_letters else "*" for letter
+                     in word]
+        print("The current word is: ", " ".join(word_list))
 
         user_input = input("Guess a letter: ").upper()
         # if user input is a valid letter and has not been used yet
@@ -46,10 +49,15 @@ def play_game():
             if user_input in letters_in_word:
                 letters_in_word.remove(user_input)
 
-            elif user_input in guessed_letters:
-                print("Letter has already been used. Please try a new letter")
-
             else:
-                print("Invalid character. Please try again.")
+                # reduces attempts by one
+                attempts = attempts - 1
+                print("Letter is not in this word.")
+
+        elif user_input in guessed_letters:
+            print("Letter has already been used. Please try a new letter")
+
+        else:
+            print("Invalid character. Please try again.")
 
     # while loop ends here when letters_in_words == 0
