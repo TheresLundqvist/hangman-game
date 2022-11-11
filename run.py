@@ -37,15 +37,18 @@ def play_game():
     while len(letters_in_word) > 0 and attempts > 0:
         # shows user how many attempts they have left 
         # each used letter shown as a string seperated by whitespace
-        print("You have", attempts, "attempts left. You have used these"
+        print("You have", attempts, "attempts left. You have used these "
               "letters: ", " ".join(guessed_letters))
+        print()
 
         # show correctly guessed letters in word otherwise hide letters with *
         word_list = [letter if letter in guessed_letters else "*" for letter
                      in word]
         print("The current word is: ", " ".join(word_list))
+        print()
 
-        user_input = input("\nGuess a letter: ").upper()
+        user_input = input("Guess a letter: ").upper()
+        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
         # if user input is a valid letter and has not been used yet
         # then add the guessed letter to guessed_letter set.
         if user_input in alphabet - guessed_letters:
@@ -57,21 +60,28 @@ def play_game():
             else:
                 # reduces attempts by one
                 attempts = attempts - 1
-                print("Letter is not in this word.")
+                print(":::: The letter is not in this word ::::")
+                print()
 
         elif user_input in guessed_letters:
-            print("Letter has already been used. Please try a new letter")
+            print(":: Letter has already been used. Please try new letter ::")
+            print()
 
         else:
-            print("Invalid character. Please try again.")
+            print(":::: Invalid character. Please try again ::::")
+            print()
 
     # while loop ends here when letters_in_words == 0 or attempts == 0.
     if attempts == 0:
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("Oh no! Your out of attempts. The word was", word)
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
 
     else:
         # if user guesses the word, then print:
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("That's right! The word was", word, "!!")
+        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
 
 
 play_game()
