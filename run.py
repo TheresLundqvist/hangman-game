@@ -24,8 +24,8 @@ def play_game():
     """
     Main game function. Allows user 6 attempts at guessing the random selected
     word. User gets to see length of corrent word masked by *. When user is
-    right the * is replaced by the correct letter. Attempts reduces as user is
-    wrong. The user gets to see the secret word at the end of the game
+    correct the * is replaced by the correct letter. Attempts reduces as user 
+    is wrong. The user gets to see the secret word at the end of the game
     regardless of forfeit or success.
     """
     word = get_valid_word(words)
@@ -37,7 +37,8 @@ def play_game():
 
     attempts = 6
 
-    # get input from user as long as letters_in_word is greater then 0
+    # as long as letters_in_word and attempts is greater then 0 then keep
+    # asking user for input
     while len(letters_in_word) > 0 and attempts > 0:
         # shows user how many attempts they have left
         # each used letter shown as a string seperated by whitespace
