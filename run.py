@@ -1,6 +1,9 @@
+"""
+importing from python libaries
+"""
 import random
-from words import words
 import string
+from words import words
 
 
 def get_valid_word(words):
@@ -19,10 +22,11 @@ def get_valid_word(words):
 
 def play_game():
     """
-    Main game function. Allows user 6 attempts at guessing the random selected word.
-    User gets to see length of corrent word masked by *. When user is right the * is
-    replaced by the correct letter. Attempts reduces as user is wrong. The user gets
-    to see the secret word at the end of the game, regardless of forfeit or success.
+    Main game function. Allows user 6 attempts at guessing the random selected
+    word. User gets to see length of corrent word masked by *. When user is
+    right the * is replaced by the correct letter. Attempts reduces as user is
+    wrong. The user gets to see the secret word at the end of the game
+    regardless of forfeit or success.
     """
     word = get_valid_word(words)
     # letters in the word saved to a set
@@ -35,7 +39,7 @@ def play_game():
 
     # get input from user as long as letters_in_word is greater then 0
     while len(letters_in_word) > 0 and attempts > 0:
-        # shows user how many attempts they have left 
+        # shows user how many attempts they have left
         # each used letter shown as a string seperated by whitespace
         print("You have", attempts, "attempts left. You have used these "
               "letters: ", " ".join(guessed_letters))
