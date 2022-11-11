@@ -1,9 +1,17 @@
 """
 importing from python libaries
 """
+import os
 import random
 import string
 from words import words
+
+
+def clear():
+    """
+    Function to clear the terminal
+    """
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def get_valid_word(words):
@@ -24,7 +32,7 @@ def play_game():
     """
     Main game function. Allows user 6 attempts at guessing the random selected
     word. User gets to see length of corrent word masked by *. When user is
-    correct the * is replaced by the correct letter. Attempts reduces as user 
+    correct the * is replaced by the correct letter. Attempts reduces as user
     is wrong. The user gets to see the secret word at the end of the game
     regardless of forfeit or success.
     """
@@ -40,6 +48,7 @@ def play_game():
     # as long as letters_in_word and attempts is greater then 0 then keep
     # asking user for input
     while len(letters_in_word) > 0 and attempts > 0:
+        clear()
         # shows user how many attempts they have left
         # each used letter shown as a string seperated by whitespace
         print("You have", attempts, "attempts left. You have used these "
@@ -63,6 +72,7 @@ def play_game():
                 letters_in_word.remove(user_input)
 
             else:
+                clear()
                 # reduces attempts by one
                 attempts = attempts - 1
                 print(":::: The letter is not in this word ::::")
@@ -89,4 +99,18 @@ def play_game():
         print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
 
 
-play_game()
+if __name__ == "__main__":
+    clear()
+    play_game()
+    while True:
+        question = input("Would you like to play again? Y/N \n")
+        if question.lower() == "n":
+            clear()
+            print("Thank you for playing hangman :) ")
+            break
+        elif question.lower() != "y":
+            clear()
+            print(f"{question} is not valid. Try again")
+        else:
+            clear()
+            play_game()
