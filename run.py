@@ -17,6 +17,12 @@ def username():
 
     username = " "
     while True:
+        print("Let's")
+        print("| |    | |    /¨¨¨\    |¨¨¨\  | | /¨¨¨¨¨¨¨    |¨¨|")
+        print("| |    | |   /  ¨  \   | |\ \ | ||  /¨¨¨¨¨    |  |")
+        print("|  ¨¨¨¨  |  /  / \  \  | | \ \| || |  ____¨¨| |__|")
+        print("| |¨¨¨¨| | /  /¨¨¨\  \ | |  \   || |_____/  |  __")
+        print("| |    | |/  /     \  \| |   \__| \________/  |__|")
         username = input("Welcome! Please enter a username: \n")
         # if username is not alphanumeric
         if username.isalnum() is not True:
