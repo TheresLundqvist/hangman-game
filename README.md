@@ -155,3 +155,4 @@ Deployment steps are as follows, after account setup:
 * Code Institute for the template for this project.
 * [Youtube](https://www.youtube.com/) for great tutorials and inspiration.
 * [ASCII ART](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) for the pattern logos used for this project.
+* [Wikipedia](https://en.wikipedia.org/wiki/Hangman_(game)) for the details on the hangman game.
