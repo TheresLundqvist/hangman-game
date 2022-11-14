@@ -136,6 +136,7 @@ def play_game():
         print("  \___/|_| |_| |_| |_|\___/(_)")
         print()
         print("You are out of attempts")
+        print("The secret word was", word,)
         print()
 
     else:
