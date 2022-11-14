@@ -104,31 +104,19 @@ with the Code Institute template that we students were instructed to ignore.
 
 ## **Bugs**
 
-* When I deployed my project to Github pages I discovered my project was broken, the links to the other files (CSS, blog and gallery) dit not work.
-* I discovered this was because I had used aboulte file paths such as this in my code
+### **Solved Bugs**
 
-![bug, wrong filepath](documentation/filepath.png)
+* When following the love sandwich project deployment, tutor mentions that modules imported for code needs to be installed  
+and moved to requirements file in order for them to work in Heroku. I tried importing my modules but got error messages for  
+all of them. Went through slack and google in search for a solution. At last i contacted my mentor who explained to me   
+that the modules I'm using for my project is standard python and does'nt need installment. 
 
-* When I removed the / from the start of the path the problem was fixed.
+<img width="800" src="documentation/bug.png">
 
----
+### **Remaining Bugs**
 
-## **Validator testing**
-
-* HTML
-3 errors occured since I used h1-headings on three occations i blog.html, when replaced code passed.
-* CSS
-No errors were found when passing through the official (Jigsaw) validator.
-* Accessability
-I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
-
-<img width="1000" src="documentation/lighthouse-score.png">
-
----
-
-### **Unfixed Bugs**
-
-* No unfixed bugs.
+* Can't seem to shake off the 55 warnings due to the pattern writing. Would off looked better if they were'nt there.  
+But the pattern writing makes the game a bit more fun!
 
 ---
 
