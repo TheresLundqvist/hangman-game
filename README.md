@@ -1,15 +1,12 @@
 # **The Hangman Game**
 
-The Yoga Studio website is a inspirational page for a yoga studio based in a small town in Sweden.  
-The yoga studio is a warm, serene and hospitable studio with a clear mission - to make everyone feel welcome and well taken care of - regardless of age or disabilities.   
+A classic game of hangman written in Python and played in a terminal based window. The game is deployed to Code Institute's mock terminal on Heroku.   
 
 
 
-Users of the webpage will be able to find inspiration through the studio gallery, blogposts from our teachers and reading the customer reviews.   
-Users will easily find location and contact information at the bottom of page in form of address, contact info and clickable social media links.  
-This website is to increase the awerness of The Yoga studio´s existence and for anyone looking to start their yoga journey and lives in the area of the studios location. 
+User will only have six attempts to try and uncover the letters of the secret word - only hint is the length of the word. 
 
-<img width="1000" src="documentation/screenshot-responsive.png">
+<img width="1000" src="documentation/responsive.png">
 
 ---
 ## **Features** 
@@ -21,7 +18,7 @@ This website is to increase the awerness of The Yoga studio´s existence and for
  * The navigation has a dark font and a lighter background for good contrast.
  * The studio name has a bigger font than the navigation bar to make a clear statement of the name of studio and webpage.
 
- <img width="1000" src="documentation/header.png">
+ <img width="1000" src="documentation/main.png">
 
 ### **The main section**
 
@@ -30,7 +27,7 @@ This website is to increase the awerness of The Yoga studio´s existence and for
 * Under the intriguing main text is a clickable read more button that takes users to about section further down the page.
 * The previous colors from the header is switched up in the main section with headers background as font color and vice versa. 
 
-<img width="1000" src="documentation/main.png">
+<img width="1000" src="documentation/username.png">
 
 ### **The about section**
 * The about section gives the users more information about the studio and location.
@@ -38,7 +35,7 @@ This website is to increase the awerness of The Yoga studio´s existence and for
 * The same woman from the main section accours in this sections again to maintain a common tread.
 * The colors from the header recur in this section.
 
-<img width="1000" src="documentation/about-section.png">
+<img width="1000" src="documentation/start-game.png">
 
 
 ### **Customer reviews**
