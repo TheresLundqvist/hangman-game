@@ -4,52 +4,66 @@ A classic game of hangman written in Python and played in a terminal based windo
 
 
 
-User will only have six attempts to try and uncover the letters of the secret word - only hint is the length of the word.The words is randomly selected from a file with  
-nearly 2500 words. The letters of the secret word is hidden by asterisk symbols and will uncover once the user guesses the correct letter. The secret word is revealed  
-to user at the end of the game regardless of forfeit or win. If user manages to guess the word, 100 point is awarded and a total score is shown to the user as they  
-descide to leave the game.
+User will only have six attempts to try and uncover the letters of the secret word - the only hint is the length of the word. The words is randomly selected from a file  
+with nearly 2500 words. The letters of the secret word is hidden by asterisk symbols and will uncover one by one as the user guesses the correct letter. The secret word  
+is revealed to user at the end of the game regardless of forfeit or win. If user manages to guess the word, 100 point is awarded and a total score is shown before the user  
+exits the game.
   
 [Here is the live version of my project](https://hangman-gamee.herokuapp.com/)
 
 <img width="1000" src="documentation/responsive.png">
 
 ---
-## **Features** 
+## **How to play** 
 
-### **Navigation**  
+ * Hangman is a guessing game were the user's mission is to guess all letter in a secret word with a maxiumum times of attempts.
+ * In this game the secret word is shown on the screen hidden by asterisk symbols so the only hint user's gets is the length of the word.
+ * User will have a total of 6 attempts on each word, for every inaccurate guess the attempts reduces by 1. 
+ * Invalid characters such as symbols, double letters, numbers or already used letters will not affect user's remaining attempts.
+ * User is awarded 100 points every time they manage to guess a word.
+ * At the end of the game user's can choose to restart or end game, if they choose to end the game a total score is shown otherwise the  
+ game will restart and the score will continue count as the game proceeds.
+ * To read more about the traditional game of hangman, you can visit [this wikipedia page](https://en.wikipedia.org/wiki/Hangman_(game)).
 
- * The top of the page shows the studio name, a clickable link that takes user back to homepage.
- * To the right of the navigation user can find links to home, blog and gallery pages.
- * The navigation has a dark font and a lighter background for good contrast.
- * The studio name has a bigger font than the navigation bar to make a clear statement of the name of studio and webpage.
+ <img width="400" src="documentation/main.png"><img width="600" src="documentation/start-game.png">
 
- <img width="1000" src="documentation/main.png">
+ ---
 
-### **The main section**
+## **Features**
 
-* The main section gives users a glimt of the studio through a large photo of two women training in serene enviroment.
-* The main text is a short introduction of the yoga studio.
-* Under the intriguing main text is a clickable read more button that takes users to about section further down the page.
-* The previous colors from the header is switched up in the main section with headers background as font color and vice versa. 
+### **Main game page**
 
-<img width="1000" src="documentation/username.png">
-
-### **The about section**
-* The about section gives the users more information about the studio and location.
-* This section provides user with information about the studio, what the goal of the studio is and and whom the yoga classes are for - everybody! 
-* The same woman from the main section accours in this sections again to maintain a common tread.
-* The colors from the header recur in this section.
-
-<img width="1000" src="documentation/start-game.png">
+* User's is greeted by a big pattern saying "Let's hang!" with a welcome message instructing them to input a username.
+* The instructions for the game appears in the terminal after the user has choosen a username.
+* The game will start as soon as the user presses the enter key.  
 
 
-### **Customer reviews**
+<img width="400" src="documentation/username.png">
 
-* The customer reviews aim to increase the users need for a visit to the studio by showing three happy clients reviews.
-* The goal is to reenforce the user that the studio is worth a visit.
-* The colors from main section recurs here to create a good balance between sections.
+### **The secret word**
+* The secret word is randomly generated from a list of nearly 2500 words.
+* The letters in the word is hidden by asterisk symbols and will only uncover if user inputs a correct letter.
+* The attempts counter will reduce by one everytime the user passes a letter that is not in the secret word.
 
-<img width="1000" src="documentation/reviews.png">
+<img width="500" src="documentation/start-game.png">
+
+### **Attempts**
+
+* User is granted 6 attempts to every word and game.
+* Attempts reduces by one each time the user passes a letter that is not in the word.
+* The attempts counter will ignore blunders such as already used letters, symbols, numbers or double letters.  
+  
+  
+<img width="500" src="documentation/correct-word.png">
+
+### **Input letters**
+
+* Used letters is stored and visual to the user at the top of the right corner.
+* If user passes the same letter twice, invalid characters, or a letter that is not in the word an  
+message appears at the top of the page to give the user feedback.  
+
+<img width="400" src="documentation/letter-used.png"><img width="380" src="documentation/invalid-character.png">  
+<img width="400" src="documentation/letter-not-in-word.png">
 
 ### **The contact section**
 

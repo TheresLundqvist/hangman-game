@@ -132,9 +132,11 @@ def play_game():
         # if user guesses the word, then print:
         global score
         score += 100
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("That's right! The word was", word, "!!")
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
+        print("                    Congratulations!                        ")
+        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
+        print("             The secret word was", word,)
+        print()
         return score
 
 
@@ -147,8 +149,14 @@ if __name__ == "__main__":
         question = input("Would you like to play again? Y/N \n")
         if question.lower() == "n":
             clear()
-            print("Thank you for playing hangman :) ")
-            print(f"You scored: {score} points")
+            print("Thank you for playing")
+            print("| |    | |    /¨¨¨\    |¨¨¨\  | | /¨¨¨¨¨¨¨        |¨¨|")
+            print("| |    | |   /  ¨  \   | |\ \ | ||  /¨¨¨¨¨        |  |")
+            print("|  ¨¨¨¨  |  /  / \  \  | | \ \| || |  ____¨¨|     |__|")
+            print("| |¨¨¨¨| | /  /¨¨¨\  \ | |  \   || |_____/  |      __")
+            print("| |    | |/  /     \  \| |   \__| \________/ -MAN |__|")
+            print()
+            print(f":::: You scored: {score} points ::::")
             break
         elif question.lower() != "y":
             clear()
