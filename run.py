@@ -6,6 +6,8 @@ import random
 import string
 from words import words
 
+score = 0
+
 
 def username():
     """
@@ -121,9 +123,12 @@ def play_game():
 
     else:
         # if user guesses the word, then print:
+        global score
+        score += 100
         print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
         print("That's right! The word was", word, "!!")
         print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        return score
 
 
 if __name__ == "__main__":
@@ -136,6 +141,7 @@ if __name__ == "__main__":
         if question.lower() == "n":
             clear()
             print("Thank you for playing hangman :) ")
+            print(f"You scored: {score} points")
             break
         elif question.lower() != "y":
             clear()
