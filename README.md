@@ -1,31 +1,152 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **The Hangman Game**
 
-Welcome TheresLundqvist,
+The Yoga Studio website is a inspirational page for a yoga studio based in a small town in Sweden.  
+The yoga studio is a warm, serene and hospitable studio with a clear mission - to make everyone feel welcome and well taken care of - regardless of age or disabilities.   
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+Users of the webpage will be able to find inspiration through the studio gallery, blogposts from our teachers and reading the customer reviews.   
+Users will easily find location and contact information at the bottom of page in form of address, contact info and clickable social media links.  
+This website is to increase the awerness of The Yoga studio´s existence and for anyone looking to start their yoga journey and lives in the area of the studios location. 
 
-## Creating the Heroku app
+<img width="1000" src="documentation/screenshot-responsive.png">
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+---
+## **Features** 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### **Navigation**  
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+ * The top of the page shows the studio name, a clickable link that takes user back to homepage.
+ * To the right of the navigation user can find links to home, blog and gallery pages.
+ * The navigation has a dark font and a lighter background for good contrast.
+ * The studio name has a bigger font than the navigation bar to make a clear statement of the name of studio and webpage.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+ <img width="1000" src="documentation/header.png">
 
-Connect your GitHub repository and deploy as normal.
+### **The main section**
 
-## Constraints
+* The main section gives users a glimt of the studio through a large photo of two women training in serene enviroment.
+* The main text is a short introduction of the yoga studio.
+* Under the intriguing main text is a clickable read more button that takes users to about section further down the page.
+* The previous colors from the header is switched up in the main section with headers background as font color and vice versa. 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+<img width="1000" src="documentation/main.png">
 
------
-Happy coding!
+### **The about section**
+* The about section gives the users more information about the studio and location.
+* This section provides user with information about the studio, what the goal of the studio is and and whom the yoga classes are for - everybody! 
+* The same woman from the main section accours in this sections again to maintain a common tread.
+* The colors from the header recur in this section.
+
+<img width="1000" src="documentation/about-section.png">
+
+
+### **Customer reviews**
+
+* The customer reviews aim to increase the users need for a visit to the studio by showing three happy clients reviews.
+* The goal is to reenforce the user that the studio is worth a visit.
+* The colors from main section recurs here to create a good balance between sections.
+
+<img width="1000" src="documentation/reviews.png">
+
+### **The contact section**
+
+* The contact section provides the user with location to join The Yoga Studio.
+* This section also gives user contact information to call or email.
+* The page matches the colors from about section with same box style.
+
+<img width="1000" src="documentation/contact.png">
+
+### **The footer section**
+* The footer section is linked with all social media platforms the studio is connected to.
+* The page links to facebook, instagram, twitter and youtube and opens i new tabs when clicked.
+* The colors from the header at the top, matches the colors in this section at the bottom of page - to create a nice frame to page.
+
+<img width="1000" src="documentation/social-media.png">
+
+## **Blog page**
+
+### **Blog preview**
+
+* The blog navigation link from the home page redirects user to the blog page.
+* In the blog main page a preview of three blog posts can be seen, the whole area round the previews is clickable and redirects users to the full blog posts in other pages.
+* The blog preview page is arrenged to fit in with colors from the home page.
+* The magnifying glas icon is used to hint to users that the area is a clickable link that will redirect them.
+
+<img width="1000" src="documentation/blog-main.png">
+
+### **Full blog post pages**
+
+* The full blog post pages is color indentical to its parent blog page - the blog preview page.
+
+<img width="1000" src="documentation/full-blog-post.png">
+
+## **Gallery**
+
+* Matching photos is combined in one page to give inspiration to users.
+* The gallery is responsive and changes from 4 columns - to three - to two and lastly to one in small devices.
+
+<img width="1000" src="documentation/gallery.png">
+
+---
+
+## **Testing**
+
+* I tested that the page works in diffrent browsers such as Chrome, firefox and Microsoft Edge.
+* I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
+* I confirmed that the header, navigation, main, about us, reviews, footer, gallery and blog pages text are all readable and easy to understand.
+* I have confirmed that the links between diffrent pages work and are accessible.
+
+## **Bugs**
+
+* When I deployed my project to Github pages I discovered my project was broken, the links to the other files (CSS, blog and gallery) dit not work.
+* I discovered this was because I had used aboulte file paths such as this in my code
+
+![bug, wrong filepath](documentation/filepath.png)
+
+* When I removed the / from the start of the path the problem was fixed.
+
+---
+
+## **Validator testing**
+
+* HTML
+3 errors occured since I used h1-headings on three occations i blog.html, when replaced code passed.
+* CSS
+No errors were found when passing through the official (Jigsaw) validator.
+* Accessability
+I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
+
+<img width="1000" src="documentation/lighthouse-score.png">
+
+---
+
+### **Unfixed Bugs**
+
+* No unfixed bugs.
+
+---
+
+## **Deployment**
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+* In the GitHub repository, navigate to the settings tab.
+* From the source section drop-down menu, select the Master Branch.
+* Once the master branch has been selected, the page provided the link to the completed website.
+
+The live link can be found here - [The Yoga Studio](https://thereslundqvist.github.io/The-Yoga-Studio/)
+
+---
+
+## **Credits**
+
+### **Content**
+
+* The text for the about section is copied and translated from [Hot Yoga - Stockholm](https://www.hotyogasthlm.se/)
+* The customer reviews was copied from [Trustpilot](https://www.trustpilot.com/review/www.yogabody.com)
+* Icons for about, reviews, social media icons and blog headers are from [Font Awesome](https://fontawesome.com/)
+* The blogposts are copied from [Mind Oasis](https://mindoasis.org/)
+
+### **Media** 
+
+* The images was all downloaded from [Pexels](https://www.pexels.com/sv-se/)

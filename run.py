@@ -69,7 +69,7 @@ def play_game():
     word. User gets to see length of corrent word masked by *. When user is
     correct the * is replaced by the correct letter. Attempts reduces as user
     is wrong. The user gets to see the secret word at the end of the game
-    regardless of forfeit or success.
+    regardless of forfeit or success. 100p is rewarded when user is correct.
     """
     word = get_valid_word(words)
     # letters in the word saved to a set
