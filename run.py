@@ -7,6 +7,31 @@ import string
 from words import words
 
 
+def username():
+    """
+    Welcome user and get username input
+    """
+
+    username = " "
+    while True:
+        username = input("Welcome! Please enter a username: \n")
+
+        if username.isalnum() is not True:
+            print("Invalid character. Only letters and numbers allowed.")
+            continue
+        else:
+            print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
+            print(f"Hello {username}, you have 6 attempts to guess the "
+                  "secret word.")
+            input("Press the Enter key when you are ready to start the game")
+            return username
+
+    print(f"Hello {username}, you have 6 attempts to guess the "
+          "secret word.")
+    input("Press the Enter key when you are ready to start the game")
+    return username
+
+
 def clear():
     """
     Function to clear the terminal
@@ -48,7 +73,6 @@ def play_game():
     # as long as letters_in_word and attempts is greater then 0 then keep
     # asking user for input
     while len(letters_in_word) > 0 and attempts > 0:
-        clear()
         # shows user how many attempts they have left
         # each used letter shown as a string seperated by whitespace
         print("You have", attempts, "attempts left. You have used these "
@@ -62,29 +86,32 @@ def play_game():
         print()
 
         user_input = input("Guess a letter: ").upper()
-        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
+        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
         # if user input is a valid letter and has not been used yet
         # then add the guessed letter to guessed_letter set.
         if user_input in alphabet - guessed_letters:
             guessed_letters.add(user_input)
+            clear()
             # if user input is correct then remove letter from letters_in_word
             if user_input in letters_in_word:
                 letters_in_word.remove(user_input)
 
             else:
-                clear()
                 # reduces attempts by one
                 attempts = attempts - 1
+                clear()
                 print(":::: The letter is not in this word ::::")
-                print()
+                print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
 
         elif user_input in guessed_letters:
+            clear()
             print(":: Letter has already been used. Please try new letter ::")
-            print()
+            print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
 
         else:
+            clear()
             print(":::: Invalid character. Please try again ::::")
-            print()
+            print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
 
     # while loop ends here when letters_in_words == 0 or attempts == 0.
     if attempts == 0:
@@ -100,6 +127,8 @@ def play_game():
 
 
 if __name__ == "__main__":
+    clear()
+    username()
     clear()
     play_game()
     while True:
