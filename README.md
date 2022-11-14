@@ -4,7 +4,12 @@ A classic game of hangman written in Python and played in a terminal based windo
 
 
 
-User will only have six attempts to try and uncover the letters of the secret word - only hint is the length of the word. 
+User will only have six attempts to try and uncover the letters of the secret word - only hint is the length of the word.The words is randomly selected from a file with  
+nearly 2500 words. The letters of the secret word is hidden by asterisk symbols and will uncover once the user guesses the correct letter. The secret word is revealed  
+to user at the end of the game regardless of forfeit or win. If user manages to guess the word, 100 point is awarded and a total score is shown to the user as they  
+descide to leave the game.
+  
+[Here is the live version of my project](https://hangman-gamee.herokuapp.com/)
 
 <img width="1000" src="documentation/responsive.png">
 
