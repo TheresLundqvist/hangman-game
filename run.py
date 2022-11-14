@@ -23,6 +23,7 @@ def username():
         print("|  ¨¨¨¨  |  /  / \  \  | | \ \| || |  ____¨¨| |__|")
         print("| |¨¨¨¨| | /  /¨¨¨\  \ | |  \   || |_____/  |  __")
         print("| |    | |/  /     \  \| |   \__| \________/  |__|")
+        print()
         username = input("Welcome! Please enter a username: \n")
         # if username is not alphanumeric
         if username.isalnum() is not True:
