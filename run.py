@@ -18,11 +18,11 @@ def username():
     username = " "
     while True:
         print("Let's")
-        print("| |    | |    /¨¨¨\    |¨¨¨\  | | /¨¨¨¨¨¨¨    |¨¨|")
-        print("| |    | |   /  ¨  \   | |\ \ | ||  /¨¨¨¨¨    |  |")
-        print("|  ¨¨¨¨  |  /  / \  \  | | \ \| || |  ____¨¨| |__|")
-        print("| |¨¨¨¨| | /  /¨¨¨\  \ | |  \   || |_____/  |  __")
-        print("| |    | |/  /     \  \| |   \__| \________/  |__|")
+        print("  _   _    _    _   _  ____                        _ ")
+        print(" | | | |  / \  | \ | |/ ___|_ __ ___   __ _ _ __  | |")
+        print(" | |_| | / _ \ |  \| | |  _| '_ ` _ \ / _` | '_ \ | | ")
+        print(" |  _  |/ ___ \| |\  | |_| | | | | | | (_| | | | ||_|")
+        print(" |_| |_/_/   \_\_| \_|\____|_| |_| |_|\__,_|_| |_|(_)")
         print()
         username = input("Welcome! Please enter a username: \n")
         # if username is not alphanumeric
@@ -92,7 +92,12 @@ def play_game():
         # show correctly guessed letters in word otherwise hide letters with *
         word_list = [letter if letter in guessed_letters else "*" for letter
                      in word]
-        print("The current word is: ", " ".join(word_list))
+        print("                       _   _         ")
+        print("__      _____  _ __ __| | (_)___   _ ")
+        print("\ \ /\ / / _ \| '__/ _` | | / __| (_)")
+        print(" \ V  V / (_) | | | (_| | | \__ \  _  ", " ".join(word_list))
+        print("  \_/\_/ \___/|_|  \__,_| |_|___/ (_)")
+        print()
         print()
 
         user_input = input("Guess a letter: \n").upper()
@@ -124,18 +129,26 @@ def play_game():
 
     # while loop ends here when letters_in_words == 0 or attempts == 0.
     if attempts == 0:
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
-        print("Oh no! Your out of attempts. The word was", word)
-        print("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::")
+        print("   ___  _                   _ ")
+        print("  / _ \| |__    _ __   ___ | |")
+        print(" | | | | '_ \  | '_ \ / _ \| |")
+        print(" | |_| | | | | | | | | (_) |_|")
+        print("  \___/|_| |_| |_| |_|\___/(_)")
+        print()
+        print("You are out of attempts")
+        print()
 
     else:
         # if user guesses the word, then print:
         global score
         score += 100
-        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
-        print("                    Congratulations!                        ")
-        print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
-        print("             The secret word was", word,)
+        print(" __        ___                        _ ")
+        print(" \ \      / (_)_ __  _ __   ___ _ __ | |")
+        print("  \ \ /\ / /| | '_ \| '_ \ / _ \ '__|| |")
+        print("   \ V  V / | | | | | | | |  __/ |   |_|")
+        print("    \_/\_/  |_|_| |_|_| |_|\___|_|   (_)")
+        print()
+        print("       The secret word was", word,)
         print()
         return score
 
@@ -150,13 +163,14 @@ if __name__ == "__main__":
         if question.lower() == "n":
             clear()
             print("Thank you for playing")
-            print("| |    | |    /¨¨¨\    |¨¨¨\  | | /¨¨¨¨¨¨¨        |¨¨|")
-            print("| |    | |   /  ¨  \   | |\ \ | ||  /¨¨¨¨¨        |  |")
-            print("|  ¨¨¨¨  |  /  / \  \  | | \ \| || |  ____¨¨|     |__|")
-            print("| |¨¨¨¨| | /  /¨¨¨\  \ | |  \   || |_____/  |      __")
-            print("| |    | |/  /     \  \| |   \__| \________/ -MAN |__|")
+            print("  _   _    _    _   _  ____                        _ ")
+            print(" | | | |  / \  | \ | |/ ___|_ __ ___   __ _ _ __  | |")
+            print(" | |_| | / _ \ |  \| | |  _| '_ ` _ \ / _` | '_ \ | | ")
+            print(" |  _  |/ ___ \| |\  | |_| | | | | | | (_| | | | ||_|")
+            print(" |_| |_/_/   \_\_| \_|\____|_| |_| |_|\__,_|_| |_|(_)")
             print()
             print(f":::: You scored: {score} points ::::")
+            print()
             break
         elif question.lower() != "y":
             clear()

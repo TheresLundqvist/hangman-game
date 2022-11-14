@@ -25,7 +25,7 @@ exits the game.
  game will restart and the score will continue count as the game proceeds.
  * To read more about the traditional game of hangman, you can visit [this wikipedia page](https://en.wikipedia.org/wiki/Hangman_(game)).
 
- <img width="400" src="documentation/main.png"><img width="600" src="documentation/start-game.png">
+ <img width="400" src="documentation/main.png"><img width="500" src="documentation/start-game.png">
 
  ---
 
@@ -33,7 +33,7 @@ exits the game.
 
 ### **Main game page**
 
-* User's is greeted by a big pattern saying "Let's hang!" with a welcome message instructing them to input a username.
+* User's is greeted by a big pattern saying "Let's HANGman!" with a welcome message instructing them to input a username.
 * The instructions for the game appears in the terminal after the user has choosen a username.
 * The game will start as soon as the user presses the enter key.  
 
@@ -56,7 +56,7 @@ exits the game.
   
 <img width="500" src="documentation/correct-word.png">
 
-### **Input letters**
+### **Input validation of letters**
 
 * Used letters is stored and visual to the user at the top of the right corner.
 * If user passes the same letter twice, invalid characters, or a letter that is not in the word an  
@@ -65,53 +65,42 @@ message appears at the top of the page to give the user feedback.
 <img width="400" src="documentation/letter-used.png"><img width="380" src="documentation/invalid-character.png">  
 <img width="400" src="documentation/letter-not-in-word.png">
 
-### **The contact section**
+### **If user wins**
 
-* The contact section provides the user with location to join The Yoga Studio.
-* This section also gives user contact information to call or email.
-* The page matches the colors from about section with same box style.
+* If the user can guess all letters in the word, the terminal clears and a congratulations message appears in the window.
+* 100 points is added to users score.
+* User get the option to restart game or end game.
 
-<img width="1000" src="documentation/contact.png">
+<img width="500" src="documentation/win.png">
 
-### **The footer section**
-* The footer section is linked with all social media platforms the studio is connected to.
-* The page links to facebook, instagram, twitter and youtube and opens i new tabs when clicked.
-* The colors from the header at the top, matches the colors in this section at the bottom of page - to create a nice frame to page.
+### **If user runs out of attempts**
 
-<img width="1000" src="documentation/social-media.png">
+* If user runs out of attempts the terminal clears and a message appears like down below
+* User gets the option to restart or to end game.
 
-## **Blog page**
+<img width="500" src="documentation/loose-screen.png">
 
-### **Blog preview**
+### **Scores**
 
-* The blog navigation link from the home page redirects user to the blog page.
-* In the blog main page a preview of three blog posts can be seen, the whole area round the previews is clickable and redirects users to the full blog posts in other pages.
-* The blog preview page is arrenged to fit in with colors from the home page.
-* The magnifying glas icon is used to hint to users that the area is a clickable link that will redirect them.
+* User can only win points by guessing the secret word before attempts run out
+* User earns 100 points for every time they manage to guess the word 
+* User can never loose points
+* Total score is shown when user enters "n" and descides to end game
 
-<img width="1000" src="documentation/blog-main.png">
-
-### **Full blog post pages**
-
-* The full blog post pages is color indentical to its parent blog page - the blog preview page.
-
-<img width="1000" src="documentation/full-blog-post.png">
-
-## **Gallery**
-
-* Matching photos is combined in one page to give inspiration to users.
-* The gallery is responsive and changes from 4 columns - to three - to two and lastly to one in small devices.
-
-<img width="1000" src="documentation/gallery.png">
+<img width="500" src="documentation/score.png">
 
 ---
 
 ## **Testing**
 
-* I tested that the page works in diffrent browsers such as Chrome, firefox and Microsoft Edge.
-* I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
-* I confirmed that the header, navigation, main, about us, reviews, footer, gallery and blog pages text are all readable and easy to understand.
-* I have confirmed that the links between diffrent pages work and are accessible.
+I have manually tested this project by doing the following:
+
+* I tested and found no errors in the gitpod terminal after installing pycodestyle due to PEP8 website being down.
+* I tested that the inputs only allows expected characters and trows error when unexpected characters is used.
+* Remining is 55 warnings due to the pattern writing im using for the main- and other logos and 3 warnings that followed  
+with the Code Institute template that we students were instructed to ignore.  
+
+<img width="500" src="documentation/warnings.png">
 
 ## **Bugs**
 
