@@ -9,13 +9,14 @@ from words import words
 
 def username():
     """
-    Welcome user and get username input
+    Welcome user and get username input. Uses isalum() method to check so
+    username only contains numbers and letters.
     """
 
     username = " "
     while True:
         username = input("Welcome! Please enter a username: \n")
-
+        # if username is not alphanumeric
         if username.isalnum() is not True:
             print("Invalid character. Only letters and numbers allowed.")
             continue
@@ -23,18 +24,18 @@ def username():
             print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
             print(f"Hello {username}, you have 6 attempts to guess the "
                   "secret word.")
-            input("Press the Enter key when you are ready to start the game")
+            input("Press the Enter key when you are ready to start the game\n")
             return username
 
     print(f"Hello {username}, you have 6 attempts to guess the "
           "secret word.")
-    input("Press the Enter key when you are ready to start the game")
+    input("Press the Enter key when you are ready to start the game\n")
     return username
 
 
 def clear():
     """
-    Function to clear the terminal
+    Function to clear the terminal, called when terminal gets crouded.
     """
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -85,7 +86,7 @@ def play_game():
         print("The current word is: ", " ".join(word_list))
         print()
 
-        user_input = input("Guess a letter: ").upper()
+        user_input = input("Guess a letter: \n").upper()
         print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
         # if user input is a valid letter and has not been used yet
         # then add the guessed letter to guessed_letter set.
@@ -97,17 +98,16 @@ def play_game():
                 letters_in_word.remove(user_input)
 
             else:
-                # reduces attempts by one
+                # reduces attempts by one if user letter is incorrect
                 attempts = attempts - 1
                 clear()
                 print(":::: The letter is not in this word ::::")
                 print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
-
+        # if user guesses same letter twice
         elif user_input in guessed_letters:
             clear()
             print(":: Letter has already been used. Please try new letter ::")
             print("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨")
-
         else:
             clear()
             print(":::: Invalid character. Please try again ::::")
@@ -141,5 +141,6 @@ if __name__ == "__main__":
             clear()
             print(f"{question} is not valid. Try again")
         else:
+            # if user chooses "y" then clear terminal and restart game
             clear()
             play_game()
