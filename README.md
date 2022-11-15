@@ -1,13 +1,13 @@
 # **The Hangman Game**
 
 A classic game of hangman written in Python and played in a terminal-based window. The game is deployed to Code   
-Institute's mock terminal on Heroku. The user will only have six attempts to try and uncover the letters of the  
-secret word - the only hint is the length of the word.   
-  
-The words is randomly selected from a file with nearly 2500 words. The secret word's letters are hidden by asterisk  
-symbols and will uncover one by one as the user guesses the correct letter. The secret word is revealed to the user  
-at the end of the game regardless of forfeit or win. If the user can guess the word, 100 points are awarded and a  
-total score is shown before the user exits the game.
+Institute's mock terminal on Heroku. 
+
+The user will only have six attempts to try and uncover the letters of the secret word - the only hint is the length  
+of the word. The words is randomly selected from a file with nearly 2500 words. The secret word's letters are hidden  
+by asterisk symbols and will uncover one by one as the user guesses the correct letter. The secret word is revealed  
+to the user at the end of the game regardless of forfeit or win. If the user can guess the word, 100 points are awarded  
+and a total score is shown before the user exits the game.
   
 [Here is the live version of my project](https://hangman-gamee.herokuapp.com/)
 
@@ -28,7 +28,7 @@ total score is shown before the user exits the game.
  score is shown otherwise the game will restart and the score will continue to count as the game proceeds.
  * To read more about the traditional game of hangman, you can visit [this wikipedia page](https://en.wikipedia.org/wiki/Hangman_(game)).
 
- <img width="350" src="documentation/main.png"><img width="400" src="documentation/start-game.png">
+ <img width="380" src="documentation/main.png"><img width="400" src="documentation/start-game.png">
 
  ---
 
@@ -66,7 +66,7 @@ a username.
 * If the user passes the same letter twice, invalid characters, or a letter that is not in the word a  
 message appears at the top of the page to give the user feedback.  
 
-<img width="380" src="documentation/letter-used.png"><img width="370" src="documentation/invalid-character.png">  
+<img width="390" src="documentation/letter-used.png"><img width="370" src="documentation/invalid-character.png">  
 <img width="400" src="documentation/letter-not-in-word.png">
 
 ### **If user wins**
@@ -112,10 +112,10 @@ followed with the Code Institute template that we students were instructed to ig
 ### **Solved Bugs**
 
 * When following the love sandwich project deployment, the tutor mentioned that modules imported for the code  
-needs to be installed and moved to the requirements file for them to work in Heroku. I tried importing my modules  
-but got error messages for all of them. Went through slack and google in search of a solution. At last, I   
-contacted my mentor who explained to me that the modules I'm using for my project are standard python and doesn't  
-need installment. 
+needs to be installed and moved to the requirements file for them to work in Heroku. I tried importing my  
+modules but got error messages for all of them. Went through slack and google in search of a solution. At last,  
+I contacted my mentor who explained to me that the modules I'm using for my project are standard python and   
+doesn't need installment. 
 
 <img width="800" src="documentation/bug.png">
 
@@ -128,9 +128,8 @@ there. But the pattern writing makes the game a bit more fun!
 
 ## **Deployment**
 
-Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display  
-the terminal view of this backend application in a modern web browser. This is to improve the accessibility of the   
-project to others.
+Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser.  
+This is to improve the accessibility of the project to others.
 
 The live deployed application can be found at [here](https://hangman-gamee.herokuapp.com/).
 
