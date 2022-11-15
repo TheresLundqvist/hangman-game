@@ -28,7 +28,7 @@ and a total score is shown before the user exits the game.
  score is shown otherwise the game will restart and the score will continue to count as the game proceeds.
  * To read more about the traditional game of hangman, you can visit [this wikipedia page](https://en.wikipedia.org/wiki/Hangman_(game)).
 
- <img width="380" src="documentation/main.png"><img width="400" src="documentation/start-game.png">
+ <img width="400" src="documentation/main.png"><img width="400" src="documentation/start-game.png">
 
  ---
 
@@ -66,7 +66,7 @@ a username.
 * If the user passes the same letter twice, invalid characters, or a letter that is not in the word a  
 message appears at the top of the page to give the user feedback.  
 
-<img width="390" src="documentation/letter-used.png"><img width="370" src="documentation/invalid-character.png">  
+<img width="385" src="documentation/letter-used.png"><img width="370" src="documentation/invalid-character.png">  
 <img width="400" src="documentation/letter-not-in-word.png">
 
 ### **If user wins**
@@ -128,8 +128,8 @@ there. But the pattern writing makes the game a bit more fun!
 
 ## **Deployment**
 
-Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser.  
-This is to improve the accessibility of the project to others.
+Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web  
+browser. This is to improve the accessibility of the project to others.
 
 The live deployed application can be found at [here](https://hangman-gamee.herokuapp.com/).
 
