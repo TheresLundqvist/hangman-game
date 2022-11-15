@@ -107,6 +107,8 @@ followed with the Code Institute template that we students were instructed to ig
 
 <img width="500" src="documentation/warnings.png">
 
+---
+
 ## **Bugs**
 
 ### **Solved Bugs**
@@ -158,6 +160,8 @@ Deployment steps are as follows, after account setup:
 - Further down, to support dependencies, select *Add Buildpack*.
 - The order of the buildpacks is important, select `Python` first, then `Node.js` second.  
 (if they are not in this order, you can drag them to rearrange them)
+
+---
 
 ## **Credits**
 
